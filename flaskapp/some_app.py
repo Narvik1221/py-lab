@@ -7,7 +7,7 @@ from wtforms.validators import DataRequired, NumberRange
 from flask_wtf.file import FileField, FileRequired, FileAllowed
 from flask_bootstrap import Bootstrap
 from werkzeug.utils import secure_filename
-import image_utils as img_utils
+from . import image_utils as img_utils
 
 
 app = Flask(__name__)
