@@ -1,7 +1,7 @@
 from PIL import Image
 import numpy as np
 import matplotlib
-matplotlib.use('Agg')  # для работы без графического интерфейса
+matplotlib.use('Agg') 
 import matplotlib.pyplot as plt
 
 def resize_image(input_path, output_path, scale):
