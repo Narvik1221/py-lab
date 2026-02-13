@@ -1,26 +1,14 @@
 version: '1.0.{build}'
-
-# Образ виртуальной машины (Windows с Python)
 image: Visual Studio 2019
-
-# Отключаем автоматическую сборку
 build: off
 
-# Устанавливаем зависимости
 install:
   - py -3.9 -m venv venv
   - venv\Scripts\activate
   - pip install -r requirements.txt
 
-# Запускаем тесты (скрипт st.sh нужно адаптировать для Windows)
 before_test:
   - cd flaskapp
 
 test_script:
-  - python client.py
-
-# После тестов можно оставить процесс или убить – в AppVeyor тестовый скрипт должен вернуть код 0
-# Так как у нас нет долгоживущего сервера, client.py проверит работоспособность
-# Если нужно запустить сервер, то лучше использовать subprocess, но упростим: client.py делает GET-запросы к локальному серверу,
-# который должен быть запущен до тестов. Для этого можно использовать батник.
-# Создадим отдельный скрипт runtests.bat
+  - runtests.bat
