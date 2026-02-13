@@ -1,0 +1,27 @@
+# Виртуальное окружение
+venv/
+venv310/
+.env/
+
+# Кэш Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Файлы, загруженные пользователем (не храним в репозитории)
+flaskapp/static/uploads/
+flaskapp/static/histograms/
+
+# IDE
+.vscode/
+.idea/
+
+# Системные файлы
+Thumbs.db
+.DS_Store
+
+# Файлы конфигурации с секретами (если создадите позже)
+*.secret
+config_local.py
